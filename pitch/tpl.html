@@ -1,0 +1,1031 @@
+<title>Casa Uno Villas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Archivo:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --ground:#FBF9F5; --surface:#FFFFFF; --surface-2:#F2EEE7;
+  --band:#1B1512; --band-ink:#F4EEE6; --band-soft:#B9ADA1; --band-line:rgba(244,238,230,.16);
+  --ink:#221B16; --ink-soft:#6B6058;
+  --line:rgba(34,27,22,.13); --line-strong:rgba(34,27,22,.24);
+  --sand:#D9C6A9; --rattan:#A9713E; --rattan-soft:#C79A64; --palm:#41563F;
+  --pool:#5E9496; --pool-tint:#DEEBE9;
+  --good:#3F6B4A; --good-tint:#E2EFE4;
+  --shadow:0 22px 60px rgba(34,27,22,.10); --shadow-lift:0 30px 80px rgba(34,27,22,.16);
+  --r:20px; --r-lg:28px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ground:#16110E; --surface:#1F1915; --surface-2:#29211C;
+  --band:#100C0A; --band-line:rgba(244,238,230,.14);
+  --ink:#F2ECE4; --ink-soft:#A99C91;
+  --line:rgba(242,236,228,.14); --line-strong:rgba(242,236,228,.26);
+  --sand:#B9A382; --rattan:#D3A06A; --rattan-soft:#E0B888; --palm:#8FA88A;
+  --pool:#8FBDBD; --pool-tint:#20302F;
+  --good:#8FBF9C; --good-tint:#1D2C21;
+  --shadow:0 22px 60px rgba(0,0,0,.44); --shadow-lift:0 30px 80px rgba(0,0,0,.55);
+}}
+:root[data-theme="dark"]{
+  --ground:#16110E; --surface:#1F1915; --surface-2:#29211C;
+  --band:#100C0A; --band-line:rgba(244,238,230,.14);
+  --ink:#F2ECE4; --ink-soft:#A99C91;
+  --line:rgba(242,236,228,.14); --line-strong:rgba(242,236,228,.26);
+  --sand:#B9A382; --rattan:#D3A06A; --rattan-soft:#E0B888; --palm:#8FA88A;
+  --pool:#8FBDBD; --pool-tint:#20302F;
+  --good:#8FBF9C; --good-tint:#1D2C21;
+  --shadow:0 22px 60px rgba(0,0,0,.44); --shadow-lift:0 30px 80px rgba(0,0,0,.55);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:Archivo,ui-sans-serif,-apple-system,"Segoe UI",sans-serif;font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--rattan);outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.001ms!important;transition-duration:.001ms!important}html{scroll-behavior:auto}}
+
+.wrap{width:min(1220px,calc(100% - 44px));margin-inline:auto}
+.display{font-family:Fraunces,Georgia,serif;font-weight:400;letter-spacing:-.028em;line-height:1.02;text-wrap:balance;font-variation-settings:"SOFT" 30,"WONK" 1}
+h1,h2,h3{margin:0}
+.eyebrow{font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--rattan)}
+.lead{font-size:18px;color:var(--ink-soft);max-width:60ch}
+.num{font-variant-numeric:tabular-nums}
+section{padding:104px 0}
+.sec-head{display:flex;flex-direction:column;gap:14px;margin-bottom:44px;max-width:70ch}
+.sec-head h2{font-size:clamp(38px,5.2vw,62px)}
+
+.nav{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--ground) 88%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav .wrap{height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-family:Fraunces,Georgia,serif;font-size:19px;display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo i{width:26px;height:26px;border-radius:50%;background:linear-gradient(160deg,var(--pool),var(--palm));flex:none}
+.navlinks{display:flex;gap:26px;font-size:13.5px;color:var(--ink-soft)}
+.navlinks a{text-decoration:none;padding:4px 0;border-bottom:1px solid transparent;transition:color .2s,border-color .2s}
+.navlinks a:hover{color:var(--ink);border-color:var(--rattan)}
+.nav-actions{display:flex;align-items:center;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:1px solid transparent;border-radius:999px;padding:12px 20px;font-size:14px;font-weight:600;text-decoration:none;cursor:pointer;transition:transform .18s,background .2s,color .2s,border-color .2s}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--rattan);color:#FFF8EF}
+.btn-primary:hover{background:color-mix(in srgb,var(--rattan) 86%,#000)}
+.btn-ghost{border-color:var(--line-strong);background:transparent;color:var(--ink)}
+.btn-ghost:hover{border-color:var(--rattan);color:var(--rattan)}
+.btn-onband{background:var(--band-ink);color:#1B1512}
+.btn-hero-ghost{border-color:rgba(244,238,230,.34);color:var(--band-ink)}
+.btn-hero-ghost:hover{border-color:var(--sand);color:var(--sand)}
+.btn-lg{padding:15px 26px;font-size:15px}
+.theme-btn{width:38px;height:38px;border-radius:50%;border:1px solid var(--line-strong);background:transparent;cursor:pointer;display:grid;place-items:center;font-size:15px}
+
+/* hero: split, photo native portrait */
+.hero{background:var(--band);color:var(--band-ink);overflow-x:clip}
+.hero-split{display:grid;grid-template-columns:1fr 1fr;min-height:min(88vh,860px)}
+.hero-copy{display:flex;flex-direction:column;justify-content:center;gap:22px;padding:80px 60px 80px 0}
+.hero-copy h1{font-size:clamp(44px,5.4vw,78px);max-width:13ch}
+.hero-copy h1 em{font-style:italic;color:var(--sand)}
+.hero-lede{color:var(--band-soft);font-size:17.5px;max-width:44ch}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:4px}
+.hero-photo{position:relative;overflow:hidden;margin-right:calc((100vw - min(1220px,100vw - 44px))/-2)}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center 46%}
+.hero-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(27,21,18,.72),rgba(27,21,18,0) 34%)}
+.photo-credit{position:absolute;z-index:2;right:18px;bottom:16px;background:rgba(16,12,10,.6);color:#F4EEE6;font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:7px 12px;border-radius:999px;backdrop-filter:blur(8px)}
+.trust{border-top:1px solid var(--band-line);display:grid;grid-template-columns:repeat(4,1fr)}
+.trust div{padding:22px 0}
+.trust b{font-family:Fraunces,Georgia,serif;font-size:30px;display:block;line-height:1;font-variant-numeric:tabular-nums}
+.trust span{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--band-soft)}
+
+.qbar{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow-lift);padding:16px;display:grid;grid-template-columns:repeat(3,1fr) auto;gap:12px;align-items:end;transform:translateY(-36px)}
+.qfield{display:grid;gap:5px;padding:8px 14px;border-right:1px solid var(--line)}
+.qfield:nth-child(3){border-right:0}
+.qfield span{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);font-weight:700}
+.qfield b{font-family:Fraunces,Georgia,serif;font-size:19px;font-weight:400}
+
+.villa-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.villa{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
+.villa:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.villa .ph{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--surface-2)}
+.villa .ph img{width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.2,.7,.3,1)}
+.villa:hover .ph img{transform:scale(1.045)}
+.tag{position:absolute;left:14px;top:14px;z-index:2;background:rgba(16,12,10,.72);color:#F6F0E8;padding:7px 12px;border-radius:999px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;backdrop-filter:blur(6px)}
+.rate-badge{position:absolute;right:14px;top:14px;z-index:2;background:var(--good-tint);color:var(--good);padding:7px 12px;border-radius:999px;font-size:11.5px;font-weight:700;display:flex;align-items:center;gap:6px}
+.villa-body{padding:24px;display:flex;flex-direction:column;gap:13px;flex:1}
+.villa-body h3{font-family:Fraunces,Georgia,serif;font-size:30px;font-weight:400;letter-spacing:-.02em}
+.villa-body p{margin:0;color:var(--ink-soft);font-size:14.5px}
+.vstat{display:flex;align-items:center;gap:8px;font-size:13.5px;color:var(--ink-soft);flex-wrap:wrap}
+.vstat b{color:var(--ink);font-weight:600}
+.vstat .dot{width:3px;height:3px;border-radius:50%;background:var(--line-strong)}
+.specs{display:flex;flex-wrap:wrap;gap:8px}
+.spec{font-size:12px;padding:6px 11px;border:1px solid var(--line);border-radius:999px;color:var(--ink-soft)}
+.villa-foot{margin-top:auto;padding-top:16px;border-top:1px solid var(--line);display:flex;align-items:flex-end;justify-content:space-between;gap:12px}
+.price{font-family:Fraunces,Georgia,serif;font-size:27px;font-variant-numeric:tabular-nums}
+.price small{display:block;font-family:Archivo;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);font-weight:600}
+.price s{font-family:Archivo;font-size:13px;color:var(--ink-soft);font-weight:500;display:block;margin-bottom:2px}
+
+.amen{background:var(--surface-2)}
+.amen-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden}
+.amen-cell{background:var(--surface);padding:26px 22px;display:grid;gap:8px;align-content:start;min-height:158px}
+.amen-cell .ic{width:34px;height:34px;border-radius:10px;background:var(--pool-tint);color:var(--pool);display:grid;place-items:center;margin-bottom:4px}
+.amen-cell .ic svg{width:19px;height:19px}
+.amen-cell b{font-size:15px;font-weight:600}
+.amen-cell span{font-size:13.5px;color:var(--ink-soft)}
+
+.book{background:var(--band);color:var(--band-ink)}
+.book .eyebrow{color:var(--rattan-soft)} .book .lead{color:var(--band-soft)}
+.book-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:22px;align-items:start}
+.panel{background:rgba(255,255,255,.045);border:1px solid var(--band-line);border-radius:var(--r-lg);padding:26px}
+.panel + .panel{margin-top:18px}
+.panel h3{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--band-soft);font-weight:700;margin-bottom:18px}
+.pick{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.pick button{text-align:left;background:transparent;border:1px solid var(--band-line);border-radius:var(--r);padding:16px;cursor:pointer;display:grid;gap:5px;transition:border-color .2s,background .2s}
+.pick button:hover{border-color:var(--rattan-soft)}
+.pick button[aria-pressed="true"]{border-color:var(--rattan-soft);background:rgba(199,154,100,.14)}
+.pick .n{font-family:Fraunces,Georgia,serif;font-size:21px}
+.pick .m{font-size:12px;color:var(--band-soft)}
+
+.cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.cal-head b{font-family:Fraunces,Georgia,serif;font-size:20px;font-weight:400}
+.cal-nav{display:flex;gap:8px}
+.cal-nav button{width:34px;height:34px;border-radius:50%;border:1px solid var(--band-line);background:transparent;cursor:pointer;line-height:1}
+.cal-nav button:hover:not(:disabled){border-color:var(--rattan-soft)}
+.cal-nav button:disabled{opacity:.3;cursor:not-allowed}
+.dow{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-bottom:6px}
+.dow span{text-align:center;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--band-soft);font-weight:700}
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.day{aspect-ratio:1/.86;border:1px solid transparent;border-radius:11px;background:transparent;color:var(--band-ink);cursor:pointer;font-size:14px;font-variant-numeric:tabular-nums;display:grid;place-items:center;position:relative;transition:background .16s,color .16s}
+.day:hover:not(:disabled){background:rgba(255,255,255,.1)}
+.day.pad{visibility:hidden}
+.day:disabled{color:rgba(244,238,230,.24);cursor:not-allowed}
+.day.booked{color:rgba(244,238,230,.34);cursor:not-allowed;text-decoration:line-through;background:rgba(244,238,230,.055)}
+.day.wknd:after{content:"";position:absolute;bottom:7px;left:50%;transform:translateX(-50%);width:4px;height:4px;border-radius:50%;background:var(--rattan-soft);opacity:.85}
+.day:disabled:after,.day.booked:after{opacity:.25}
+.day.edge:after{background:#0F1A1A;opacity:.55}
+.day.inrange{background:rgba(143,189,189,.18);border-radius:0}
+.day.edge{background:var(--pool);color:#0F1A1A;font-weight:700}
+.day.edge.start{border-radius:11px 0 0 11px}
+.day.edge.end{border-radius:0 11px 11px 0}
+.day.edge.only{border-radius:11px}
+.legend{display:flex;gap:18px;flex-wrap:wrap;margin-top:16px;font-size:12px;color:var(--band-soft)}
+.legend i{width:11px;height:11px;border-radius:3px;display:inline-block;margin-right:7px;vertical-align:-1px}
+.guests{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.stepper{display:flex;align-items:center;gap:14px;border:1px solid var(--band-line);border-radius:999px;padding:7px 9px}
+.stepper button{width:34px;height:34px;border-radius:50%;border:1px solid var(--band-line);background:transparent;cursor:pointer;font-size:17px;line-height:1}
+.stepper button:hover:not(:disabled){border-color:var(--rattan-soft)}
+.stepper button:disabled{opacity:.3;cursor:not-allowed}
+.stepper output{font-family:Fraunces,Georgia,serif;font-size:22px;min-width:2.4ch;text-align:center;font-variant-numeric:tabular-nums}
+.hint{font-size:12.5px;color:var(--band-soft);margin-top:10px}
+.hint.warn{color:var(--rattan-soft)}
+
+.summary{position:sticky;top:92px;background:var(--surface);color:var(--ink);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-lift)}
+.sum-top{position:relative;padding:0;color:#F4EEE6;overflow:hidden;aspect-ratio:16/9}
+.sum-top img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.sum-top:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,12,10,.15),rgba(16,12,10,.82))}
+.sum-top .in{position:absolute;z-index:2;left:24px;right:24px;bottom:18px}
+.sum-top .eyebrow{color:#DCC9AC}
+.sum-top .vn{font-family:Fraunces,Georgia,serif;font-size:30px;margin-top:4px;letter-spacing:-.02em}
+.sum-body{padding:22px 26px 26px;display:grid;gap:14px}
+.line{display:flex;justify-content:space-between;gap:14px;font-size:14px}
+.line span{color:var(--ink-soft)}
+.line b{font-weight:600;font-variant-numeric:tabular-nums}
+.rule{height:1px;background:var(--line)}
+.total{display:flex;justify-content:space-between;align-items:flex-end;gap:14px}
+.total .t{font-family:Fraunces,Georgia,serif;font-size:36px;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.total span{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);font-weight:700}
+.save{background:var(--good-tint);color:var(--good);border-radius:14px;padding:13px 15px;font-size:13px;display:flex;justify-content:space-between;gap:12px;align-items:center;font-weight:600}
+.save b{font-variant-numeric:tabular-nums}
+.dep{background:var(--pool-tint);color:var(--ink);border-radius:14px;padding:13px 15px;font-size:13px;display:flex;justify-content:space-between;gap:12px;align-items:center}
+.dep b{font-variant-numeric:tabular-nums}
+.summary .btn{width:100%}
+.foot-note{font-size:11.5px;color:var(--ink-soft);text-align:center}
+.empty{color:var(--ink-soft);font-size:14px}
+.confirm{padding:30px 26px;display:grid;gap:14px;text-align:center}
+.confirm .tick{width:52px;height:52px;border-radius:50%;background:var(--palm);color:#F4EEE6;display:grid;place-items:center;margin:0 auto;font-size:24px}
+.confirm h4{font-family:Fraunces,Georgia,serif;font-size:26px;font-weight:400;margin:0}
+.confirm p{margin:0;font-size:14px;color:var(--ink-soft)}
+.code{font-variant-numeric:tabular-nums;letter-spacing:.16em;font-weight:700;background:var(--surface-2);border:1px dashed var(--line-strong);border-radius:12px;padding:12px}
+
+.tbl-scroll{overflow-x:auto;border-radius:var(--r);border:1px solid var(--line)}
+.rates-table{width:100%;border-collapse:collapse;font-size:14.5px;background:var(--surface);min-width:640px}
+.rates-table th,.rates-table td{padding:16px 18px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+.rates-table th{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);font-weight:700;background:var(--surface-2)}
+.rates-table td:first-child{font-family:Fraunces,Georgia,serif;font-size:19px}
+.rates-table td.n{font-variant-numeric:tabular-nums;font-weight:600}
+.rates-table td.was{font-variant-numeric:tabular-nums;color:var(--ink-soft);text-decoration:line-through;font-weight:500}
+.rates-table td.sv{font-variant-numeric:tabular-nums;color:var(--good);font-weight:700}
+.rates-table tr:last-child td{border-bottom:0}
+.incl{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:26px}
+.incl ul{margin:10px 0 0;padding:0;list-style:none;display:grid;gap:9px}
+.incl li{font-size:14.5px;color:var(--ink-soft);padding-left:24px;position:relative}
+.incl li:before{content:"";position:absolute;left:0;top:8px;width:9px;height:9px;border-radius:50%;background:var(--pool)}
+.incl.x li:before{background:var(--sand)}
+.incl h4{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--rattan);font-weight:700;margin:0}
+
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:180px;gap:12px}
+.slot{border-radius:var(--r);position:relative;overflow:hidden;border:0;padding:0;cursor:zoom-in;background:var(--surface-2)}
+.slot img{width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.2,.7,.3,1)}
+.slot:hover img{transform:scale(1.05)}
+.slot figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 14px 12px;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#FFF8EF;background:linear-gradient(180deg,transparent,rgba(16,12,10,.72));text-align:left}
+.big2{grid-column:span 2;grid-row:span 2}
+.wide2{grid-column:span 2}
+
+.lb{position:fixed;inset:0;z-index:200;background:rgba(12,9,7,.94);display:none;place-items:center;padding:28px}
+.lb[open]{display:grid}
+.lb img{max-width:min(1100px,92vw);max-height:86vh;object-fit:contain;border-radius:12px}
+.lb figcaption{color:#EFE7DD;text-align:center;margin-top:14px;font-size:13px;letter-spacing:.1em;text-transform:uppercase}
+.lb-close{position:absolute;top:20px;right:22px;width:44px;height:44px;border-radius:50%;border:1px solid rgba(244,238,230,.3);background:transparent;color:#F4EEE6;cursor:pointer;font-size:20px}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;border:1px solid rgba(244,238,230,.3);background:rgba(0,0,0,.35);color:#F4EEE6;cursor:pointer;font-size:22px}
+.lb-prev{left:20px} .lb-next{right:20px}
+
+.proof{background:var(--surface-2)}
+.host{display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:26px;margin-bottom:22px}
+.host .av{width:64px;height:64px;border-radius:50%;background:linear-gradient(150deg,var(--sand),var(--rattan));display:grid;place-items:center;font-family:Fraunces,Georgia,serif;font-size:26px;color:#FFF8EF}
+.host h3{font-family:Fraunces,Georgia,serif;font-size:24px;font-weight:400}
+.host p{margin:4px 0 0;font-size:14px;color:var(--ink-soft)}
+.host-stats{display:flex;gap:28px}
+.host-stats div{text-align:right}
+.host-stats b{font-family:Fraunces,Georgia,serif;font-size:24px;display:block;line-height:1;font-variant-numeric:tabular-nums}
+.host-stats span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);font-weight:700}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.quote{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px;display:grid;gap:12px;align-content:start}
+.quote p{margin:0;font-family:Fraunces,Georgia,serif;font-size:18px;line-height:1.4;font-weight:400}
+.who{display:flex;align-items:center;gap:11px;margin-top:auto}
+.who i{width:34px;height:34px;border-radius:50%;background:linear-gradient(150deg,var(--sand),var(--rattan));flex:none}
+.who b{font-size:13.5px;font-weight:600;display:block}
+.who small{font-size:12px;color:var(--ink-soft)}
+.stars{color:var(--rattan);letter-spacing:.14em;font-size:13px}
+.mentions{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.mention{font-size:12.5px;padding:7px 13px;border-radius:999px;background:var(--surface);border:1px solid var(--line);color:var(--ink-soft)}
+.mention b{color:var(--ink);font-variant-numeric:tabular-nums}
+
+.here-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:center}
+.routes{border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;background:var(--surface)}
+.route{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 22px;border-bottom:1px solid var(--line)}
+.route:last-child{border-bottom:0}
+.route b{font-family:Fraunces,Georgia,serif;font-size:20px;font-weight:400}
+.route small{display:block;color:var(--ink-soft);font-size:13px}
+.route .t{font-variant-numeric:tabular-nums;font-weight:600;font-size:15px;color:var(--pool)}
+
+.faq-list{border-top:1px solid var(--line);max-width:920px}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-q{width:100%;background:none;border:0;padding:22px 0;display:flex;align-items:center;justify-content:space-between;gap:20px;cursor:pointer;text-align:left;font-family:Fraunces,Georgia,serif;font-size:21px;font-weight:400;letter-spacing:-.015em}
+.faq-q .pm{flex:none;width:28px;height:28px;border-radius:50%;border:1px solid var(--line-strong);display:grid;place-items:center;font-size:16px;font-family:Archivo;transition:transform .25s,background .2s,color .2s}
+.faq-item[data-open="true"] .pm{transform:rotate(45deg);background:var(--rattan);color:#FFF8EF;border-color:var(--rattan)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .32s ease}
+.faq-a p{margin:0 0 22px;color:var(--ink-soft);font-size:15px;max-width:68ch}
+
+.owner{background:var(--band);color:var(--band-ink)}
+.owner .eyebrow{color:var(--rattan-soft)} .owner .lead{color:var(--band-soft)}
+.roi{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:36px 0 12px}
+.roi-card{border:1px solid var(--band-line);border-radius:var(--r);padding:24px;display:grid;gap:6px}
+.roi-card .k{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--band-soft);font-weight:700}
+.roi-card .v{font-family:Fraunces,Georgia,serif;font-size:40px;line-height:1;font-variant-numeric:tabular-nums;color:var(--rattan-soft)}
+.roi-card p{margin:6px 0 0;font-size:13.5px;color:var(--band-soft)}
+.fix{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--band-line);border:1px solid var(--band-line);border-radius:var(--r-lg);overflow:hidden;margin-top:30px}
+.fix-cell{background:var(--band);padding:26px;display:grid;gap:10px;align-content:start}
+.fix-cell .was{font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#C98B6B}
+.fix-cell h4{font-family:Fraunces,Georgia,serif;font-size:23px;font-weight:400;margin:0}
+.fix-cell p{margin:0;font-size:14px;color:var(--band-soft)}
+.phases{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+.phase{border:1px solid var(--band-line);border-radius:var(--r);padding:24px;display:grid;gap:10px;align-content:start}
+.phase .pn{font-family:Fraunces,Georgia,serif;font-size:15px;color:var(--rattan-soft)}
+.phase h4{font-family:Fraunces,Georgia,serif;font-size:24px;font-weight:400;margin:0}
+.phase ul{margin:4px 0 0;padding-left:18px;display:grid;gap:7px;font-size:13.5px;color:var(--band-soft)}
+.close-cta{margin-top:44px;border:1px solid var(--band-line);border-radius:var(--r-lg);padding:38px;display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap;background:rgba(255,255,255,.04)}
+.close-cta h3{font-family:Fraunces,Georgia,serif;font-size:clamp(28px,3.6vw,42px);font-weight:400;max-width:20ch;letter-spacing:-.02em}
+.close-actions{display:flex;gap:12px;flex-wrap:wrap}
+.calc{border:1px solid var(--band-line);border-radius:var(--r-lg);padding:34px;margin:34px 0;display:grid;grid-template-columns:.85fr 1.15fr;gap:40px;align-items:center;background:rgba(255,255,255,.04)}
+.calc h3{font-family:Fraunces,Georgia,serif;font-size:clamp(28px,3.4vw,40px);font-weight:400;letter-spacing:-.02em;margin:10px 0 12px}
+.calc-head p{margin:0;color:var(--band-soft);font-size:15px}
+.calc-body label{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--band-soft);font-weight:700;margin-bottom:14px}
+.calc-body input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:5px;border-radius:99px;background:rgba(244,238,230,.2);outline:none}
+.calc-body input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:26px;border-radius:50%;background:var(--rattan-soft);cursor:grab;border:3px solid var(--band)}
+.calc-body input[type=range]::-moz-range-thumb{width:26px;height:26px;border-radius:50%;background:var(--rattan-soft);cursor:grab;border:3px solid var(--band)}
+.calc-val{margin-top:14px;font-size:14px;color:var(--band-soft)}
+.calc-val b{color:var(--band-ink);font-variant-numeric:tabular-nums}
+.calc-out{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px}
+.calc-out div{border:1px solid var(--band-line);border-radius:var(--r);padding:18px}
+.calc-out span{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--band-soft);font-weight:700;margin-bottom:8px}
+.calc-out b{font-family:Fraunces,Georgia,serif;font-size:30px;font-variant-numeric:tabular-nums;line-height:1}
+.calc-out .big{background:rgba(199,154,100,.13);border-color:rgba(199,154,100,.4)}
+.calc-out .big b{font-size:40px;color:var(--rattan-soft)}
+.calc-note{margin:16px 0 0;font-size:12px;color:var(--band-soft)}
+.swap{display:grid;gap:1px;background:var(--band-line);border:1px solid var(--band-line);border-radius:var(--r-lg);overflow:hidden;margin-top:16px}
+.swap-row{display:grid;grid-template-columns:1fr auto 1fr;gap:20px;align-items:center;background:var(--band);padding:22px 26px}
+.swap-row .from{color:#C98B6B;font-size:14.5px}
+.swap-row .to{font-size:15px;color:var(--band-ink);font-weight:500}
+.swap-row .ar{color:var(--band-soft);font-size:18px}
+.swap-row .k{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--band-soft);font-weight:700;margin-bottom:6px}
+.demo-note{background:rgba(199,154,100,.12);border:1px solid rgba(199,154,100,.34);color:var(--band-ink);border-radius:14px;padding:14px 18px;font-size:12.5px;margin-top:26px}
+
+footer{background:var(--band);color:var(--band-soft);border-top:1px solid var(--band-line);padding:52px 0 40px;font-size:13.5px}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:34px}
+.f-grid a{text-decoration:none}
+.f-grid a:hover{color:var(--band-ink)}
+.f-grid h5{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--band-ink);font-weight:700;margin:0 0 14px}
+.f-list{display:grid;gap:9px}
+.f-brand{font-family:Fraunces,Georgia,serif;font-size:24px;color:var(--band-ink)}
+.f-bottom{margin-top:38px;padding-top:20px;border-top:1px solid var(--band-line);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:12px}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.7,.3,1),transform .7s cubic-bezier(.2,.7,.3,1)}
+.reveal.on{opacity:1;transform:none}
+
+@media(max-width:1000px){
+  .navlinks{display:none}
+  .hero-split{grid-template-columns:1fr;min-height:0}
+  .hero-copy{padding:64px 0 44px}
+  .hero-photo{margin:0 calc((100vw - min(1220px,100vw - 44px))/-2);aspect-ratio:4/3}
+  .hero-photo:after{background:linear-gradient(180deg,rgba(27,21,18,.5),rgba(27,21,18,0) 40%)}
+  .book-grid,.here-grid{grid-template-columns:1fr}
+  .summary{position:static}
+  .villa-grid,.quotes,.phases,.roi{grid-template-columns:1fr 1fr}
+  .calc{grid-template-columns:1fr;gap:26px;padding:26px}
+  .swap-row{grid-template-columns:1fr;gap:10px}
+  .swap-row .ar{display:none}
+  .amen-grid,.gal{grid-template-columns:1fr 1fr}
+  .trust{grid-template-columns:1fr 1fr}
+  .qbar{grid-template-columns:1fr 1fr;transform:translateY(-28px)}
+  .qfield{border-right:0;border-bottom:1px solid var(--line)}
+  .host{grid-template-columns:auto 1fr;gap:16px}
+  .host-stats{grid-column:1/-1;justify-content:space-between}
+  .host-stats div{text-align:left}
+}
+@media(max-width:660px){
+  section{padding:76px 0}
+  .wrap{width:min(100% - 28px,1220px)}
+  .villa-grid,.quotes,.phases,.fix,.incl,.roi{grid-template-columns:1fr}
+  .calc-out{grid-template-columns:1fr}
+  .amen-grid{grid-template-columns:1fr}
+  .qbar{grid-template-columns:1fr}
+  .f-grid{grid-template-columns:1fr}
+  .gal{grid-template-columns:1fr 1fr;grid-auto-rows:130px}
+  .big2{grid-row:span 2}
+  .pick{grid-template-columns:1fr}
+  .close-cta{padding:26px}
+  .hero-copy h1{font-size:42px}
+}
+</style>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top"><i></i>Casa Uno Villas</a>
+    <nav class="navlinks">
+      <a href="#villas">The Villas</a>
+      <a href="#amenities">Amenities</a>
+      <a href="#book">Availability</a>
+      <a href="#rates">Rates</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+      <a href="#owner">For the Owners</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="theme-btn" id="themeBtn" aria-label="Switch between light and dark">&#9680;</button>
+      <a class="btn btn-primary" href="#book">Book direct</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="top" style="padding:0">
+  <div class="wrap">
+    <div class="hero-split">
+      <div class="hero-copy">
+        <p class="eyebrow" style="color:var(--sand)">Lubao, Pampanga &#183; Three private villas</p>
+        <h1 class="display">Book the whole villa. <em>Bring your people.</em></h1>
+        <p class="hero-lede">Three Bali-inspired villas, each with its own pool and its own gate. No shared lobbies, no other guests &#8212; and booking direct costs less than the same night on Airbnb.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary btn-lg" href="#book">Check availability</a>
+          <a class="btn btn-hero-ghost btn-lg" href="#villas">See the villas</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="{{IMG:hero}}" alt="Casa Uno's lit pool and villa at blue hour, framed by banana leaves">
+        <span class="photo-credit">Casa Uno &#183; 27sqm pool</span>
+      </div>
+    </div>
+    <div class="trust">
+      <div><b class="num">4.96</b><span>Across 28 reviews</span></div>
+      <div><b class="num">85K</b><span>Facebook community</span></div>
+      <div><b>1 hr</b><span>Typical reply time</span></div>
+      <div><b class="num">60</b><span>Guests across the estate</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="qbar reveal">
+    <div class="qfield"><span>Villa</span><b id="qVilla">Casa Uno</b></div>
+    <div class="qfield"><span>Dates</span><b id="qDates">Pick your nights</b></div>
+    <div class="qfield"><span>Guests</span><b id="qGuests">10 guests</b></div>
+    <a class="btn btn-primary btn-lg" href="#book">Check availability</a>
+  </div>
+</div>
+
+<section id="villas" style="padding-top:24px">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">The Villas</p>
+      <h2 class="display">Three houses, one gate, zero strangers.</h2>
+      <p class="lead">Each villa books whole and private. Take one for a barkada weekend, two for a family reunion, or the entire estate &#8212; sixty guests, three pools &#8212; when you need the run of the place.</p>
+    </div>
+    <div class="villa-grid reveal" id="villaGrid"></div>
+  </div>
+</section>
+
+<section class="amen" id="amenities">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">What's Inside</p>
+      <h2 class="display">Everything's already here.</h2>
+      <p class="lead">You bring food and people. The house handles the rest &#8212; and it's included in the rate, not billed back to you at checkout.</p>
+    </div>
+    <div class="amen-grid reveal">
+      <div class="amen-cell"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 16c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2"/><path d="M2 20c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2"/><path d="M7 14V6a2 2 0 0 1 4 0"/><path d="M13 14V6a2 2 0 0 1 4 0"/></svg></div><b>Private pool at every villa</b><span>27sqm at Casa Uno, 53sqm at Casa Tres &#8212; lit at night, with a lounge pool bed at Tres.</span></div>
+      <div class="amen-cell"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><b>Cinema by the pool</b><span>Projector and screen over the water. Guests call it the best part of the stay.</span></div>
+      <div class="amen-cell"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 15a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3Z"/><path d="M6 11v1a6 6 0 0 0 12 0v-1M12 18v3"/></svg></div><b>Videoke by the pool</b><span>Full song book, through the same poolside setup. Indoors after midnight.</span></div>
+      <div class="amen-cell"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 11h16v6a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3v-6Z"/><path d="M8 7c0-1.5-1-1.5-1-3M12 7c0-1.5-1-1.5-1-3M16 7c0-1.5-1-1.5-1-3"/></svg></div><b>Hot tub &amp; soaking tubs</b><span>Hot tub at Casa Tres, freestanding garden bathtubs open to the sky at Dos and Tres.</span></div>
+      <div class="amen-cell"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 3v8M10 3v8M8 11v10M14 3c0 4 4 4 4 8 0 3-2 3-2 3v7"/></svg></div><b>Fully equipped kitchen</b><span>Range, fridge, complete utensils and appliances. Most groups cook rather than order in.</span></div>
+      <div class="amen-cell"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M7 18v2M17 18v2M7 10h4"/></svg></div><b>Hotel-grade beds</b><span>Fully air-conditioned, hotel mattresses and pillows, towels and drinking water provided.</span></div>
+      <div class="amen-cell"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 10.5C6 7.5 9.5 6 12 6s6 1.5 9 4.5"/><path d="M6.5 14C8.5 12 10.5 11 12 11s3.5 1 5.5 3"/><path d="M10 17.5c.8-.8 1.4-1 2-1s1.2.2 2 1"/><circle cx="12" cy="20" r="1"/></svg></div><b>High-speed WiFi &amp; smart TVs</b><span>Three smart TVs with Netflix at Casa Uno. Fast enough to work from, if it comes to that.</span></div>
+      <div class="amen-cell"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 17h16M6 17v-4.5L8 8h8l2 4.5V17"/><circle cx="8" cy="19" r="1.6"/><circle cx="16" cy="19" r="1.6"/></svg></div><b>Six-car parking &amp; CCTV</b><span>Inside the gate, cameras on the outdoor grounds only. Pets welcome at Casa Uno.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Check Availability</p>
+      <h2 class="display">See the calendar. Know the price. Pay less than Airbnb.</h2>
+      <p class="lead">Pick your villa, your nights and your headcount &#8212; the total updates as you go, and we show you exactly what the same stay would cost on Airbnb.</p>
+    </div>
+    <div class="book-grid">
+      <div>
+        <div class="panel">
+          <h3>1 &#8212; Choose your villa</h3>
+          <div class="pick" id="pickVilla"></div>
+        </div>
+        <div class="panel">
+          <h3>2 &#8212; Choose your nights</h3>
+          <div class="cal-head">
+            <b id="calLabel">Month</b>
+            <div class="cal-nav">
+              <button id="calPrev" aria-label="Previous month">&#8249;</button>
+              <button id="calNext" aria-label="Next month">&#8250;</button>
+            </div>
+          </div>
+          <div class="dow"><span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span></div>
+          <div class="days" id="calDays"></div>
+          <div class="legend">
+            <span><i style="background:var(--pool)"></i>Your stay</span>
+            <span><i style="background:rgba(244,238,230,.14);box-shadow:inset 0 0 0 1px rgba(244,238,230,.3)"></i>Already booked</span>
+            <span><i style="background:rgba(199,154,100,.85)"></i>Fri &amp; Sat priced as weekend</span>
+          </div>
+          <p class="hint" id="calHint">Tap a check-in date, then a check-out date.</p>
+        </div>
+        <div class="panel">
+          <h3>3 &#8212; How many are coming?</h3>
+          <div class="guests">
+            <div class="stepper">
+              <button id="gMinus" aria-label="Fewer guests">&#8722;</button>
+              <output id="gOut" class="num">10</output>
+              <button id="gPlus" aria-label="More guests">+</button>
+            </div>
+            <p class="hint" id="gHint" style="margin:0;max-width:38ch"></p>
+          </div>
+        </div>
+      </div>
+
+      <aside class="summary" id="summary">
+        <div class="sum-top">
+          <img id="sImg" src="{{IMG:card-uno}}" alt="">
+          <div class="in">
+            <p class="eyebrow">Your reservation</p>
+            <div class="vn" id="sVilla">Casa Uno</div>
+          </div>
+        </div>
+        <div class="sum-body" id="sBody"></div>
+      </aside>
+    </div>
+    <div class="demo-note">Demo build &#8212; the calendar, pricing and guest logic all run live in this page. Airbnb comparison prices were checked in August 2026 for a one-night stay. Availability shown is sample data; in the live site it syncs to the Airbnb and Klook calendars so a date can never be double-sold.</div>
+  </div>
+</section>
+
+<section id="rates">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Rates</p>
+      <h2 class="display">Published, so nobody has to ask.</h2>
+      <p class="lead">Whole-villa pricing for one night, direct. The Airbnb column is what the same night costs through the platform once its guest service fee is added.</p>
+    </div>
+    <div class="tbl-scroll reveal">
+      <table class="rates-table">
+        <thead><tr><th>Villa</th><th>Sleeps</th><th>Rate covers</th><th>Direct, Sun&#8211;Thu</th><th>Direct, Fri &amp; Sat</th><th>On Airbnb</th><th>You save</th></tr></thead>
+        <tbody id="ratesBody"></tbody>
+      </table>
+    </div>
+    <div class="incl reveal">
+      <div>
+        <h4>Included in every stay</h4>
+        <ul>
+          <li>Whole-villa exclusivity &#8212; you are the only booking on that house</li>
+          <li>Pool, poolside cinema and videoke, no usage fee</li>
+          <li>Linens, towels, toiletries and free drinking water</li>
+          <li>Full kitchen use, complete utensils and appliances, griller</li>
+          <li>Six-car parking inside the gate, CCTV on outdoor areas, caretaker on call</li>
+        </ul>
+      </div>
+      <div class="incl x">
+        <h4>Good to know before you book</h4>
+        <ul>
+          <li>50% reservation deposit holds the date; balance on arrival</li>
+          <li>Extra guests beyond the base count: &#8369;800 per head, per night</li>
+          <li>No corkage &#8212; bring your own food and drinks</li>
+          <li>Videoke and outdoor speakers off by 12 midnight</li>
+          <li>Check in 3:00 PM, check out 12:00 NN</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">The Property</p>
+      <h2 class="display">Look around before you commit.</h2>
+      <p class="lead">Seventy-two photographs across the three villas. Tap any of them to open it full size.</p>
+    </div>
+    <div class="gal reveal" id="gal"></div>
+  </div>
+</section>
+
+<section class="proof" id="reviews">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Reviews</p>
+      <h2 class="display">Twenty-eight stays, 4.96 average.</h2>
+    </div>
+    <div class="host reveal">
+      <div class="av">D</div>
+      <div>
+        <h3>Hosted by Danna Jane</h3>
+        <p>Superhost &#183; 4 years hosting &#183; speaks English and Filipino &#183; 100% response rate</p>
+      </div>
+      <div class="host-stats">
+        <div><b class="num">4.96</b><span>Rating</span></div>
+        <div><b class="num">28</b><span>Reviews</span></div>
+        <div><b>1 hr</b><span>Replies in</span></div>
+      </div>
+    </div>
+    <div class="quotes reveal">
+      <div class="quote"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>&#8220;It is like a home away from home. The host and their helpers are very responsive and helpful. The kids and the kids-alike really enjoyed the cinema like movies &amp; karaoke by the pool.&#8221;</p><div class="who"><i></i><div><b>Maria Carmina</b><small>Casa Dos &#183; January 2026</small></div></div></div>
+      <div class="quote"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>&#8220;We had a wonderful stay! The place was spotless, well-equipped. Our host was very responsive and made check-in easy. Highly recommend!&#8221;</p><div class="who"><i></i><div><b>Justine</b><small>Casa Tres &#183; January 2026</small></div></div></div>
+      <div class="quote"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>&#8220;We had a great stay and they're accommodating &#8212; especially when we needed help with our car.&#8221;</p><div class="who"><i></i><div><b>Yhna Esteffani Rose</b><small>Casa Dos &#183; January 2026</small></div></div></div>
+    </div>
+    <div class="mentions reveal">
+      <span class="mention">Guests mention:</span>
+      <span class="mention">Hospitality <b>21</b></span>
+      <span class="mention">Cleanliness <b>9</b></span>
+      <span class="mention">Family <b>8</b></span>
+      <span class="mention">Pool <b>5</b></span>
+      <span class="mention">Kitchen <b>3</b></span>
+      <span class="mention">Accuracy <b>5</b></span>
+    </div>
+    <p class="foot-note" style="text-align:left;margin-top:16px">Review text and counts from the three Airbnb listings, August 2026.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap here-grid">
+    <div class="reveal">
+      <div class="sec-head" style="margin-bottom:26px">
+        <p class="eyebrow">Getting Here</p>
+        <h2 class="display">Closer than you think.</h2>
+      </div>
+      <p class="lead" style="margin-bottom:24px">Purok 4, Barangay Santo Domingo, Lubao, Pampanga 2005. Easy off SCTEX, paved all the way to the gate. The exact pin and landmark photos come with your booking confirmation.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a class="btn btn-primary" href="#book">Check dates</a>
+        <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Casa+Uno+Villas+Santo+Domingo+Lubao+Pampanga" target="_blank" rel="noopener">Open in Google Maps</a>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="routes">
+        <div class="route"><div><b>Metro Manila</b><small>NLEX &#8594; SCTEX &#8594; Dinalupihan exit</small></div><div class="t num">~1 hr 45</div></div>
+        <div class="route"><div><b>Clark / Angeles</b><small>SCTEX southbound</small></div><div class="t num">~1 hr</div></div>
+        <div class="route"><div><b>San Fernando</b><small>Gapan&#8211;Olongapo Road</small></div><div class="t num">~45 min</div></div>
+        <div class="route"><div><b>Subic</b><small>SCTEX northbound</small></div><div class="t num">~40 min</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="amen" id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Before You Book</p>
+      <h2 class="display">The questions we answer every day.</h2>
+      <p class="lead">All of it, answered here instead of in your inbox.</p>
+    </div>
+    <div class="faq-list reveal" id="faqList"></div>
+  </div>
+</section>
+
+<section class="owner" id="owner">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">For the Casa Uno Team</p>
+      <h2 class="display">We built this before we ever spoke.</h2>
+      <p class="lead">Every photograph, rate, review, capacity and phone number on this page is yours. We took them from your Drive folder, your three Airbnb listings and your Facebook page. Nothing above is a placeholder, and nothing above is a mockup &#8212; the calendar, the pricing and the guest maths all actually run.</p>
+    </div>
+
+    <div class="roi reveal">
+      <div class="roi-card"><span class="k">Sitting on the floor, per night</span><div class="v">&#8369;3,340</div><p>The average gap between your own Airbnb prices and a direct rate. Airbnb takes it out of the middle of every booking &#8212; it is not your margin and it is not your guest&#8217;s discount.</p></div>
+      <div class="roi-card"><span class="k">People who cannot book you</span><div class="v">85K</div><p>Facebook followers, a reel at 86,000 views, and an Instagram bio link that opens a GoDaddy page offering casaunovillas.com for sale.</p></div>
+      <div class="roi-card"><span class="k">Photographs nobody sees</span><div class="v">72</div><p>Across three villas, sitting in a Drive folder behind a file browser. They are genuinely beautiful. They are doing no work at all.</p></div>
+    </div>
+
+    <div class="calc reveal">
+      <div class="calc-head">
+        <p class="eyebrow">Your number, not ours</p>
+        <h3 class="display">Move the slider.</h3>
+        <p>How many bookings a month would you rather take direct than hand to a platform?</p>
+      </div>
+      <div class="calc-body">
+        <label for="bk">Direct bookings per month</label>
+        <input type="range" id="bk" min="1" max="30" value="10" aria-describedby="bkVal">
+        <div class="calc-val" id="bkVal"><b id="bkOut">10</b> bookings a month &#183; about <b id="ntOut">20</b> nights</div>
+        <div class="calc-out">
+          <div><span>Kept per month</span><b id="moOut">&#8369;66,800</b></div>
+          <div class="big"><span>Kept per year</span><b id="yrOut">&#8369;801,600</b></div>
+        </div>
+        <p class="calc-note">Based on the &#8369;3,340 average gap between your own Airbnb prices and a direct rate, at two nights per booking. Assumes bookings that would otherwise have come through the platform.</p>
+      </div>
+    </div>
+
+    <div class="sec-head reveal" style="margin:64px 0 0">
+      <p class="eyebrow">What changes</p>
+      <h2 class="display">Same villas. Same photos. Different outcome.</h2>
+    </div>
+    <div class="swap reveal">
+      <div class="swap-row"><div><span class="k">Today</span><div class="from">Your Instagram bio opens a domain-for-sale page</div></div><div class="ar">&#8594;</div><div><span class="k">Instead</span><div class="to">casaunovillas.com opens the page you just scrolled</div></div></div>
+      <div class="swap-row"><div><span class="k">Today</span><div class="from">72 photos behind a Google Drive file list</div></div><div class="ar">&#8594;</div><div><span class="k">Instead</span><div class="to">A gallery that opens full-screen and sells the stay</div></div></div>
+      <div class="swap-row"><div><span class="k">Today</span><div class="from">&#8220;PM for rates&#8221; &#8212; every enquiry answered by hand</div></div><div class="ar">&#8594;</div><div><span class="k">Instead</span><div class="to">Published rates that filter out browsers before they message you</div></div></div>
+      <div class="swap-row"><div><span class="k">Today</span><div class="from">The same eight questions, every single day</div></div><div class="ar">&#8594;</div><div><span class="k">Instead</span><div class="to">Answered once, in the FAQ above, while you sleep</div></div></div>
+      <div class="swap-row"><div><span class="k">Today</span><div class="from">28 reviews and a 4.96 average living on Airbnb</div></div><div class="ar">&#8594;</div><div><span class="k">Instead</span><div class="to">Guests who booked with you, and can be brought back for free</div></div></div>
+      <div class="swap-row"><div><span class="k">Today</span><div class="from">Villa videos are 295MB masters, too heavy to use anywhere</div></div><div class="ar">&#8594;</div><div><span class="k">Instead</span><div class="to">Compressed and autoplaying silently behind your hero</div></div></div>
+    </div>
+
+    <div class="phases reveal" style="margin-top:44px">
+      <div class="phase"><div class="pn">Already done</div><h4>What you just saw</h4><ul><li>Three villas, real photos, real rates</li><li>Working availability calendar</li><li>Live pricing with extra-guest maths</li><li>Direct-versus-Airbnb comparison</li><li>Published FAQ and rate card</li></ul></div>
+      <div class="phase"><div class="pn">Next</div><h4>Where it goes</h4><ul><li>Live on casaunovillas.com</li><li>Calendar synced to Airbnb and Klook</li><li>GCash deposits, confirmations sent automatically</li><li>Your reels playing on the page</li><li>A dashboard your team can run</li></ul></div>
+      <div class="phase"><div class="pn">Later</div><h4>What it becomes</h4><ul><li>Repeat-guest offers and gift vouchers</li><li>Reviews captured after every checkout</li><li>Seasonal campaign pages for peak dates</li><li>Booking analytics by source</li><li>A guest list that belongs to you</li></ul></div>
+    </div>
+
+    <div class="close-cta reveal">
+      <h3 class="display">Want to see this on your own domain?</h3>
+      <div class="close-actions">
+        <a class="btn btn-primary btn-lg" href="#top">Scroll it again</a>
+        <a class="btn btn-onband btn-lg" href="mailto:kirkorino@gmail.com?subject=Casa%20Uno%20Villas%20website&amp;body=Hi%20%E2%80%94%20we%20saw%20the%20site%20you%20built%20for%20Casa%20Uno%20Villas.%0A%0AWe%27d%20like%20to%20talk%20about%3A%0A%0A-%20">Let&#8217;s talk</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <div class="f-brand">Casa Uno Villas</div>
+        <p style="margin:12px 0 0;max-width:34ch">Purok 4, Barangay Santo Domingo,<br>Lubao, Pampanga 2005</p>
+      </div>
+      <div>
+        <h5>Book</h5>
+        <div class="f-list">
+          <a href="tel:+639814731946">0981 473 1946</a>
+          <a href="tel:+639194149916">0919 414 9916</a>
+          <a href="mailto:casaunovillas@gmail.com">casaunovillas@gmail.com</a>
+          <a href="https://m.me/casaunovillas" target="_blank" rel="noopener">Messenger</a>
+        </div>
+      </div>
+      <div>
+        <h5>Follow</h5>
+        <div class="f-list">
+          <a href="https://www.facebook.com/casaunovillas" target="_blank" rel="noopener">Facebook &#183; 85K</a>
+          <a href="https://www.instagram.com/casauno.villas/" target="_blank" rel="noopener">Instagram &#183; @casauno.villas</a>
+          <a href="https://www.tiktok.com/@casaunovillas" target="_blank" rel="noopener">TikTok &#183; @casaunovillas</a>
+        </div>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span>Concept site prepared for Casa Uno Villas. Photography, reviews and capacities are the property's own; direct rates are a proposed structure.</span>
+      <span>Check in 3:00 PM &#183; Check out 12:00 NN</span>
+    </div>
+  </div>
+</footer>
+
+<figure class="lb" id="lb">
+  <button class="lb-close" id="lbClose" aria-label="Close">&#10005;</button>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous photo">&#8249;</button>
+  <button class="lb-nav lb-next" id="lbNext" aria-label="Next photo">&#8250;</button>
+  <img id="lbImg" src="" alt="">
+  <figcaption id="lbCap"></figcaption>
+</figure>
+
+<script>
+(function(){
+  "use strict";
+  var EXTRA = 800;
+  var VILLAS = [
+    { id:"uno", name:"Casa Uno", tag:"The original", img:"{{IMG:card-uno}}",
+      base:15, max:20, wd:17499, we:19599, abnb:20268,
+      rating:"4.91", reviews:11, beds:"3 bedrooms \u00b7 10 beds \u00b7 4 baths", pool:"27sqm pool",
+      blurb:"The house that started it all. Three bedrooms around the 27sqm pool, a living room that looks straight out over the water, and the poolside cinema everyone books it for.",
+      specs:["3 bedrooms","4 baths","27sqm pool","Cinema by the pool","3 smart TVs","Pets allowed"] },
+    { id:"dos", name:"Casa Dos", tag:"Guest favourite", img:"{{IMG:card-dos}}",
+      base:8, max:10, wd:16999, we:18999, abnb:19677,
+      rating:"5.0", reviews:16, beds:"1 bedroom \u00b7 6 beds \u00b7 2 baths", pool:"Private pool",
+      blurb:"The quiet one, and the highest rated. A garden bathtub open to the sky, a pool wrapped in heliconia, and a kitchen guests keep writing home about.",
+      specs:["1 bedroom","2 baths","Private pool","Garden bathtub","Cinema by the pool","33 amenities"] },
+    { id:"tres", name:"Casa Tres", tag:"The largest", img:"{{IMG:card-tres}}",
+      base:16, max:30, wd:28999, we:32499, abnb:33574,
+      rating:"5.0", reviews:1, beds:"4 bedrooms \u00b7 15 beds \u00b7 5 baths", pool:"53sqm pool",
+      blurb:"The newest and biggest villa on the property. A 53sqm pool with a floating lounge bed, a sunken living area, and an alfresco table long enough for thirty.",
+      specs:["4 bedrooms","5 baths","53sqm pool","Lounge pool bed","Sunken living area","Hot tub"] }
+  ];
+  var GALLERY = [
+    { src:"{{IMG:g-cinema}}",  cap:"Cinema by the pool \u00b7 Casa Uno",   cls:"big2" },
+    { src:"{{IMG:g-tub}}",     cap:"Garden bathtub \u00b7 Casa Tres",      cls:"" },
+    { src:"{{IMG:g-deck}}",    cap:"Floating lounge bed \u00b7 Casa Tres", cls:"" },
+    { src:"{{IMG:g-living}}",  cap:"Sunken living area \u00b7 Casa Tres",  cls:"wide2" },
+    { src:"{{IMG:g-kitchen}}", cap:"Kitchen island \u00b7 Casa Uno",       cls:"" },
+    { src:"{{IMG:g-bunk}}",    cap:"Bunk room \u00b7 Casa Tres",           cls:"" },
+    { src:"{{IMG:g-sign}}",    cap:"Arrival \u00b7 Casa Dos",              cls:"wide2" },
+    { src:"{{IMG:g-doscine}}", cap:"Movie night \u00b7 Casa Dos",          cls:"" },
+    { src:"{{IMG:g-facade}}",  cap:"Facade \u00b7 Casa Uno",               cls:"" }
+  ];
+  var FAQS = [
+    ["Is it really cheaper to book direct?","Yes. Airbnb adds a guest service fee on top of the nightly rate \u2014 on Casa Uno that's about \u20b12,769 for a single night. Booking here skips it. Same villa, same dates, same host."],
+    ["What time can we check in and out?","Check in from 3:00 PM, check out by 12:00 NN. Early check-in and late checkout are sometimes possible depending on the next booking \u2014 ask when you reserve and we'll tell you straight away."],
+    ["Is the villa really private?","Yes. Each villa books whole. You will not be sharing the pool, the kitchen or the gate with another group. Book the entire estate and the property is closed to everyone else for your dates."],
+    ["What's included in the rate?","Whole-villa exclusivity, the pool, poolside cinema and videoke, full kitchen and utensils, griller, linens, towels, toiletries, free drinking water, WiFi and parking inside the gate. Nothing on that list is billed separately."],
+    ["Do you charge corkage?","No corkage. Bring whatever food and drinks you like. The kitchens are fully equipped \u2014 most groups cook, and several reviews mention it as the reason the stay worked."],
+    ["What if we're more than the base headcount?","Extra guests are \u20b1800 each per night, up to the villa's maximum. The calculator on this page adds it automatically, so the number you see is the number you pay."],
+    ["How do we hold a date?","A 50% deposit reserves it; the balance is settled on arrival. GCash and bank transfer. Once the deposit clears, the date is locked out on every platform we list on."],
+    ["Are pets allowed?","Pets are welcome at Casa Uno. Casa Dos and Casa Tres are pet-free \u2014 let us know when you enquire and we'll point you to the right villa."],
+    ["Until what time can we use the videoke?","Outdoor speakers and videoke until 12 midnight, then it moves indoors. We're in a residential barangay, and good neighbours are why we can keep offering this."],
+    ["How do we get there?","Purok 4, Barangay Santo Domingo, Lubao, Pampanga. Roughly 1 hour 45 from Metro Manila via NLEX and SCTEX, about an hour from Clark. We send an exact map pin and landmark photos with your confirmation."]
+  ];
+
+  var $ = function(s){ return document.querySelector(s); };
+  var MONTHS=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var DAYS=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+  function iso(d){ return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0"); }
+  function midnight(d){ return new Date(d.getFullYear(),d.getMonth(),d.getDate()); }
+  function addDays(d,n){ var x=new Date(d); x.setDate(x.getDate()+n); return x; }
+  function money(n){ return "\u20b1"+Math.round(n).toLocaleString("en-PH"); }
+  function shortDate(d){ return DAYS[d.getDay()]+" "+d.getDate()+" "+MONTHS[d.getMonth()].slice(0,3); }
+  function isWeekendNight(d){ var w=d.getDay(); return w===5||w===6; }
+
+  var TODAY = midnight(new Date());
+  var BOOKED = (function(){ var s={},o=[4,5,6,12,13,19,20,21,22,29,30,37,38,39,45,46,52,53,54,61,62];
+    o.forEach(function(x){ s[iso(addDays(TODAY,x))]=true; }); return s; })();
+
+  var state={ villa:"uno", ci:null, co:null, guests:10, month:new Date(TODAY.getFullYear(),TODAY.getMonth(),1), done:false };
+  function villa(){ return VILLAS.filter(function(v){ return v.id===state.villa; })[0]; }
+
+  function renderVillas(){
+    $("#villaGrid").innerHTML = VILLAS.map(function(v){
+      var save = v.abnb - v.wd;
+      return '<article class="villa">'+
+        '<div class="ph"><img src="'+v.img+'" alt="'+v.name+'" loading="lazy">'+
+          '<span class="tag">'+v.tag+'</span>'+
+          '<span class="rate-badge">\u2605 '+v.rating+' \u00b7 '+v.reviews+'</span></div>'+
+        '<div class="villa-body">'+
+          '<h3>'+v.name+'</h3>'+
+          '<div class="vstat"><b>Sleeps '+v.max+'</b><i class="dot"></i><span>'+v.beds+'</span></div>'+
+          '<p>'+v.blurb+'</p>'+
+          '<div class="specs">'+v.specs.map(function(s){ return '<span class="spec">'+s+'</span>'; }).join("")+'</div>'+
+          '<div class="villa-foot">'+
+            '<div class="price"><s>'+money(v.abnb)+' on Airbnb</s>'+money(v.wd)+'<small>Direct, per night</small></div>'+
+            '<button class="btn btn-ghost" data-pick="'+v.id+'">Check dates</button>'+
+          '</div>'+
+        '</div></article>';
+    }).join("");
+  }
+  function renderPick(){
+    $("#pickVilla").innerHTML = VILLAS.map(function(v){
+      return '<button type="button" data-pick="'+v.id+'" aria-pressed="'+(v.id===state.villa)+'">'+
+        '<span class="n">'+v.name+'</span><span class="m">Sleeps '+v.max+' \u00b7 from '+money(v.wd)+'</span></button>';
+    }).join("");
+  }
+  function renderRates(){
+    $("#ratesBody").innerHTML = VILLAS.map(function(v){
+      return '<tr><td>'+v.name+'</td><td>Up to '+v.max+'</td><td>'+v.base+' guests</td>'+
+        '<td class="n">'+money(v.wd)+'</td><td class="n">'+money(v.we)+'</td>'+
+        '<td class="was">'+money(v.abnb)+'</td><td class="sv">'+money(v.abnb-v.wd)+'</td></tr>';
+    }).join("");
+  }
+  function renderGallery(){
+    $("#gal").innerHTML = GALLERY.map(function(g,i){
+      return '<figure class="slot '+g.cls+'"><button type="button" data-lb="'+i+'" style="all:unset;cursor:zoom-in;display:block;width:100%;height:100%">'+
+        '<img src="'+g.src+'" alt="'+g.cap+'" loading="lazy"></button><figcaption>'+g.cap+'</figcaption></figure>';
+    }).join("");
+  }
+
+  function nightsBetween(a,b){ return Math.round((b-a)/86400000); }
+  function rangeIsFree(a,b){ for(var d=new Date(a); d<b; d=addDays(d,1)){ if(BOOKED[iso(d)]) return false; } return true; }
+
+  function renderCal(){
+    var y=state.month.getFullYear(), m=state.month.getMonth();
+    $("#calLabel").textContent = MONTHS[m]+" "+y;
+    $("#calPrev").disabled = (y===TODAY.getFullYear() && m===TODAY.getMonth());
+    var lead=new Date(y,m,1).getDay(), total=new Date(y,m+1,0).getDate(), html="";
+    for(var i=0;i<lead;i++) html+='<button class="day pad" tabindex="-1" aria-hidden="true"></button>';
+    for(var dn=1;dn<=total;dn++){
+      var d=new Date(y,m,dn), k=iso(d), past=d<TODAY, booked=!!BOOKED[k];
+      var cls=["day"], label=MONTHS[m]+" "+dn;
+      if(booked) cls.push("booked");
+      if(isWeekendNight(d)){ cls.push("wknd"); label+=", weekend rate"; }
+      if(state.ci&&state.co){
+        if(+d===+state.ci||+d===+state.co){ cls.push("edge"); cls.push(+d===+state.ci?"start":"end"); }
+        else if(d>state.ci&&d<state.co) cls.push("inrange");
+      } else if(state.ci&&+d===+state.ci) cls.push("edge","only");
+      html+='<button class="'+cls.join(" ")+'" data-d="'+k+'" '+((past||booked)?'disabled':'')+' aria-label="'+label+(booked?', already booked':'')+'">'+dn+'</button>';
+    }
+    $("#calDays").innerHTML=html;
+  }
+
+  function pickDate(k){
+    var p=k.split("-"), d=new Date(+p[0],+p[1]-1,+p[2]), hint=$("#calHint");
+    hint.className="hint";
+    if(!state.ci||state.co||d<=state.ci){
+      state.ci=d; state.co=null;
+      hint.textContent="Check-in "+shortDate(d)+". Now pick your check-out date.";
+    } else if(rangeIsFree(state.ci,d)){
+      state.co=d; var n=nightsBetween(state.ci,state.co);
+      hint.textContent=n+(n===1?" night":" nights")+" \u00b7 "+shortDate(state.ci)+" to "+shortDate(state.co)+". These dates are open.";
+    } else {
+      state.ci=d; state.co=null; hint.className="hint warn";
+      hint.textContent="That range crosses a booked night. Started again from "+shortDate(d)+".";
+    }
+    state.done=false; renderCal(); renderSummary(); renderQBar();
+  }
+
+  function quote(){
+    var v=villa(); if(!state.ci||!state.co) return null;
+    var wd=0,we=0,nights=0;
+    for(var d=new Date(state.ci); d<state.co; d=addDays(d,1)){ nights++; if(isWeekendNight(d)) we++; else wd++; }
+    var room=wd*v.wd+we*v.we;
+    var heads=Math.max(0,state.guests-v.base), extra=heads*EXTRA*nights;
+    var total=room+extra, airbnb=v.abnb*nights+extra;
+    return { nights:nights,wd:wd,we:we,room:room,extraHeads:heads,extra:extra,
+             total:total, airbnb:airbnb, save:airbnb-total, deposit:Math.round(total*0.5) };
+  }
+
+  function renderSummary(){
+    var v=villa(), q=quote(), body=$("#sBody");
+    $("#sVilla").textContent=v.name; $("#sImg").src=v.img; $("#sImg").alt=v.name;
+
+    if(state.done&&q){
+      body.innerHTML='<div class="confirm">'+
+        '<div class="tick" aria-hidden="true">\u2713</div>'+
+        '<h4>Dates held for you</h4>'+
+        '<p>'+v.name+' \u00b7 '+shortDate(state.ci)+' to '+shortDate(state.co)+' \u00b7 '+state.guests+' guests</p>'+
+        '<div class="code">CU-'+String(Math.abs(+state.ci/86400000|0)).slice(-4)+'-'+v.id.toUpperCase()+'</div>'+
+        '<p>We\'ll confirm on Messenger within the hour and send GCash details for the '+money(q.deposit)+' deposit. Nothing is charged until you approve it.</p>'+
+        '<a class="btn btn-primary" href="https://m.me/casaunovillas" target="_blank" rel="noopener">Confirm on Messenger</a>'+
+        '<button class="btn btn-ghost" id="againBtn" type="button">Change these dates</button></div>';
+      $("#againBtn").addEventListener("click",function(){ state.done=false; renderSummary(); });
+      return;
+    }
+    if(!q){
+      body.innerHTML='<p class="empty">Pick your check-in and check-out dates and your full price appears here \u2014 including extra guests, with nothing added later.</p>'+
+        '<div class="rule"></div>'+
+        '<div class="line"><span>Sleeps</span><b>Up to '+v.max+' guests</b></div>'+
+        '<div class="line"><span>Direct, Sun\u2013Thu</span><b>'+money(v.wd)+' / night</b></div>'+
+        '<div class="line"><span>Direct, Fri &amp; Sat</span><b>'+money(v.we)+' / night</b></div>'+
+        '<div class="rule"></div>'+
+        '<div class="line"><span>Same night on Airbnb</span><b>'+money(v.abnb)+'</b></div>'+
+        '<div class="save"><span>You save booking direct</span><b>'+money(v.abnb-v.wd)+'</b></div>';
+      return;
+    }
+    var lines="";
+    if(q.wd) lines+='<div class="line"><span>'+q.wd+' \u00d7 weeknight</span><b>'+money(q.wd*v.wd)+'</b></div>';
+    if(q.we) lines+='<div class="line"><span>'+q.we+' \u00d7 weekend night</span><b>'+money(q.we*v.we)+'</b></div>';
+    if(q.extra) lines+='<div class="line"><span>'+q.extraHeads+' extra guest'+(q.extraHeads>1?'s':'')+' \u00d7 '+q.nights+' night'+(q.nights>1?'s':'')+'</span><b>'+money(q.extra)+'</b></div>';
+
+    body.innerHTML=
+      '<div class="line"><span>Dates</span><b>'+shortDate(state.ci)+' \u2192 '+shortDate(state.co)+'</b></div>'+
+      '<div class="line"><span>Guests</span><b>'+state.guests+' of '+v.max+'</b></div>'+
+      '<div class="rule"></div>'+lines+
+      '<div class="rule"></div>'+
+      '<div class="total"><span>Total</span><div class="t">'+money(q.total)+'</div></div>'+
+      (q.save>0?'<div class="save"><span>'+money(q.airbnb)+' on Airbnb \u2014 you save</span><b>'+money(q.save)+'</b></div>':'')+
+      '<div class="dep"><span>50% deposit to hold</span><b>'+money(q.deposit)+'</b></div>'+
+      '<button class="btn btn-primary btn-lg" id="reserveBtn" type="button">Reserve these dates</button>'+
+      '<p class="foot-note">No card needed now. We confirm on Messenger first.</p>';
+    $("#reserveBtn").addEventListener("click",function(){ state.done=true; renderSummary(); });
+  }
+
+  function renderGuests(){
+    var v=villa();
+    $("#gOut").textContent=state.guests;
+    $("#gMinus").disabled=state.guests<=1;
+    $("#gPlus").disabled=state.guests>=v.max;
+    var h=$("#gHint");
+    if(state.guests>v.base){ h.className="hint warn";
+      h.textContent=(state.guests-v.base)+" above the "+v.base+" covered by the rate \u2014 "+money(EXTRA)+" per extra guest, per night."; }
+    else { h.className="hint";
+      h.textContent=v.name+" covers "+v.base+" guests in the base rate and sleeps up to "+v.max+"."; }
+  }
+  function renderQBar(){
+    $("#qVilla").textContent=villa().name;
+    $("#qDates").textContent=(state.ci&&state.co)?shortDate(state.ci)+" \u2192 "+shortDate(state.co):"Pick your nights";
+    $("#qGuests").textContent=state.guests+" guests";
+  }
+  function setVilla(id){
+    state.villa=id; state.done=false;
+    var v=villa();
+    if(state.guests>v.max) state.guests=v.max;
+    if(state.ci&&state.co&&!rangeIsFree(state.ci,state.co)){ state.ci=null; state.co=null; }
+    renderPick(); renderGuests(); renderCal(); renderSummary(); renderQBar();
+  }
+  function renderFaq(){
+    $("#faqList").innerHTML=FAQS.map(function(f,i){
+      return '<div class="faq-item" data-open="false">'+
+        '<button class="faq-q" type="button" aria-expanded="false" aria-controls="fa'+i+'">'+f[0]+'<span class="pm" aria-hidden="true">+</span></button>'+
+        '<div class="faq-a" id="fa'+i+'"><p>'+f[1]+'</p></div></div>';
+    }).join("");
+  }
+
+  /* lightbox */
+  var lbIndex=0;
+  function openLb(i){
+    lbIndex=(i+GALLERY.length)%GALLERY.length;
+    $("#lbImg").src=GALLERY[lbIndex].src;
+    $("#lbImg").alt=GALLERY[lbIndex].cap;
+    $("#lbCap").textContent=GALLERY[lbIndex].cap;
+    $("#lb").setAttribute("open","");
+    document.body.style.overflow="hidden";
+  }
+  function closeLb(){ $("#lb").removeAttribute("open"); document.body.style.overflow=""; }
+
+  function initTheme(){
+    $("#themeBtn").addEventListener("click",function(){
+      var cur=document.documentElement.getAttribute("data-theme");
+      if(!cur) cur=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";
+      document.documentElement.setAttribute("data-theme",cur==="dark"?"light":"dark");
+    });
+  }
+  function initReveal(){
+    var els=[].slice.call(document.querySelectorAll(".reveal"));
+    if(!("IntersectionObserver" in window)||window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+      els.forEach(function(e){ e.classList.add("on"); }); return; }
+    var io=new IntersectionObserver(function(en){
+      en.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("on"); io.unobserve(e.target); } });
+    },{rootMargin:"0px 0px -8% 0px",threshold:0.06});
+    els.forEach(function(e){ io.observe(e); });
+  }
+
+  /* direct-booking calculator */
+  var WEDGE = 3340, NIGHTS_PER_BOOKING = 2;
+  function renderCalc(){
+    var b = +$("#bk").value, nights = b * NIGHTS_PER_BOOKING;
+    var mo = nights * WEDGE;
+    $("#bkOut").textContent = b;
+    $("#ntOut").textContent = nights;
+    $("#moOut").textContent = money(mo);
+    $("#yrOut").textContent = money(mo * 12);
+  }
+
+  renderVillas(); renderPick(); renderRates(); renderGallery(); renderCal(); renderCalc();
+  renderGuests(); renderSummary(); renderQBar(); renderFaq(); initTheme(); initReveal();
+
+  document.addEventListener("click",function(e){
+    var pick=e.target.closest("[data-pick]");
+    if(pick){ setVilla(pick.getAttribute("data-pick"));
+      if(pick.closest(".villa")) document.getElementById("book").scrollIntoView({behavior:"smooth"});
+      return; }
+    var lb=e.target.closest("[data-lb]");
+    if(lb){ openLb(+lb.getAttribute("data-lb")); return; }
+    if(e.target.id==="lbClose"||e.target.id==="lb"){ closeLb(); return; }
+    if(e.target.id==="lbPrev"){ openLb(lbIndex-1); return; }
+    if(e.target.id==="lbNext"){ openLb(lbIndex+1); return; }
+    var day=e.target.closest(".day[data-d]");
+    if(day&&!day.disabled){ pickDate(day.getAttribute("data-d")); return; }
+    var q=e.target.closest(".faq-q");
+    if(q){
+      var item=q.parentElement, open=item.getAttribute("data-open")==="true", ans=item.querySelector(".faq-a");
+      item.setAttribute("data-open",open?"false":"true");
+      q.setAttribute("aria-expanded",open?"false":"true");
+      ans.style.maxHeight=open?"0px":(ans.scrollHeight+"px");
+    }
+  });
+  document.addEventListener("keydown",function(e){
+    if(!$("#lb").hasAttribute("open")) return;
+    if(e.key==="Escape") closeLb();
+    if(e.key==="ArrowLeft") openLb(lbIndex-1);
+    if(e.key==="ArrowRight") openLb(lbIndex+1);
+  });
+  $("#bk").addEventListener("input", renderCalc);
+  $("#calPrev").addEventListener("click",function(){ state.month=new Date(state.month.getFullYear(),state.month.getMonth()-1,1); renderCal(); });
+  $("#calNext").addEventListener("click",function(){ state.month=new Date(state.month.getFullYear(),state.month.getMonth()+1,1); renderCal(); });
+  $("#gMinus").addEventListener("click",function(){ state.guests=Math.max(1,state.guests-1); state.done=false; renderGuests(); renderSummary(); renderQBar(); });
+  $("#gPlus").addEventListener("click",function(){ state.guests=Math.min(villa().max,state.guests+1); state.done=false; renderGuests(); renderSummary(); renderQBar(); });
+})();
+</script>
