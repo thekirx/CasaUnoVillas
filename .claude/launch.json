@@ -1,6 +1,0 @@
-{
-  "version": "0.0.1",
-  "configurations": [
-    { "name": "pitch", "runtimeExecutable": "python3", "runtimeArgs": ["/private/tmp/claude-501/-Users-kiro-Desktop-CasaUnoVillas/2a8efecc-1cd7-49cd-8416-b5cd8036e17d/scratchpad/serve.py"], "port": 8747 }
-  ]
-}
